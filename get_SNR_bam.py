@@ -85,11 +85,13 @@ def removeTemp(bamid):
 ############################################################
 
 # Input arguments
-parser = argparse.ArgumentParser(description="""Returns the last base 
-    coordinates for mNET-seq reads. It considers the library to be 
-    secondstranded, with the last base sequenced in read 2 and the 
-    strand information that of read 1. Result will be 
-    filename_sorted.bam file and respective index.""")
+parser = argparse.ArgumentParser(description="""Returns the 
+    coordinates for the last base of mNET-seq reads. 
+    It considers the library to be secondstranded, 
+    with the last base to be incorporated 
+    in read 2 and the strand information in read 1. 
+    Result will be filename_sorted.bam file and 
+    respective bam index (bai).""")
 
 
 parser.add_argument('-f', '--filepath', metavar='filepath', nargs='+',
